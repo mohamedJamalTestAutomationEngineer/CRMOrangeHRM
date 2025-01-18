@@ -1,0 +1,7 @@
+2025-01-06 21:31:24,138 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-01-06 21:32:59,320 [Worker-20: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.groupID:testArtifactID:0.0.1-SNAPSHOT @ C:\Users\Mohamed\OneDrive\Desktop\codeAmazonTask\pom.xml.
+2025-01-06 21:33:01,304 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /testArtifactID/src/main/java
+2025-01-06 21:33:01,307 [Worker-20: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /testArtifactID/src/test/java
+2025-01-06 21:33:01,840 [Worker-20: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 4 sec
+2025-01-06 21:33:05,155 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Mohamed\OneDrive\Desktop\codeAmazonTask\src\main\resources
+2025-01-06 21:33:05,160 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Mohamed\OneDrive\Desktop\codeAmazonTask\src\test\resources
