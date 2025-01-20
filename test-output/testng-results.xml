@@ -1,151 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-18T22:42:55 EET" name="Suite" finished-at="2025-01-18T22:44:42 EET" duration-ms="107095">
+  <suite started-at="2025-01-20T22:32:23 EET" name="Default suite" finished-at="2025-01-20T22:32:37 EET" duration-ms="13903">
     <groups>
     </groups>
-    <test started-at="2025-01-18T22:42:55 EET" name="E-Commerce" finished-at="2025-01-18T22:44:42 EET" duration-ms="107095">
-      <class name="TestFeatures.TestAddSystemUsers">
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:42:55 EET" name="lanuchApplication" finished-at="2025-01-18T22:43:03 EET" duration-ms="7518" status="PASS">
+    <test started-at="2025-01-20T22:32:23 EET" name="Default test" finished-at="2025-01-20T22:32:37 EET" duration-ms="13903">
+      <class name="TestFeatures.TestEditSystemUsers">
+        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestEditSystemUsers@795509d9]" started-at="2025-01-20T22:32:23 EET" name="lanuchApplication" finished-at="2025-01-20T22:32:30 EET" duration-ms="6960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchApplication -->
-        <test-method signature="testAddUsersNegativeScenario()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:43:03 EET" name="testAddUsersNegativeScenario" finished-at="2025-01-18T22:43:21 EET" duration-ms="18522" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddUsersNegativeScenario -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:43:21 EET" name="tearDown" finished-at="2025-01-18T22:43:21 EET" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:43:21 EET" name="lanuchApplication" finished-at="2025-01-18T22:43:27 EET" duration-ms="6426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchApplication -->
-        <test-method signature="testAddUsersPositiveScenario()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:43:27 EET" name="testAddUsersPositiveScenario" finished-at="2025-01-18T22:43:46 EET" duration-ms="18393" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div.oxd-toast-content' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div.oxd-toast-content' (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:34)
-at WebsitePages.AddSystemsUsers.AddUsersPositiveScenario(AddSystemsUsers.java:135)
-at TestFeatures.TestAddSystemUsers.testAddUsersPositiveScenario(TestAddSystemUsers.java:20)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.oxd-toast-content"}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.24.0', revision: '748ffc9bc3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [69559ddc3c38503fb08e5bb60c9cd161, findElement {using=css selector, value=div.oxd-toast-content}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Mohamed\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63198}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63198/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 69559ddc3c38503fb08e5bb60c9cd161
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="testAddUsersPositiveScenario()[pri:0, instance:TestFeatures.TestEditSystemUsers@795509d9]" started-at="2025-01-20T22:32:30 EET" name="testAddUsersPositiveScenario" finished-at="2025-01-20T22:32:37 EET" duration-ms="6904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddUsersPositiveScenario -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestAddSystemUsers@6c0d9d86]" started-at="2025-01-18T22:43:46 EET" name="tearDown" finished-at="2025-01-18T22:43:46 EET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestEditSystemUsers@795509d9]" started-at="2025-01-20T22:32:37 EET" name="tearDown" finished-at="2025-01-20T22:32:37 EET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestFeatures.TestAddSystemUsers -->
-      <class name="TestFeatures.TestAdminSearchPage">
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:43:46 EET" name="lanuchApplication" finished-at="2025-01-18T22:43:56 EET" duration-ms="9633" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchApplication -->
-        <test-method signature="verfiyResetSearchButton()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:43:56 EET" name="verfiyResetSearchButton" finished-at="2025-01-18T22:44:02 EET" duration-ms="5870" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verfiyResetSearchButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:44:02 EET" name="tearDown" finished-at="2025-01-18T22:44:02 EET" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:44:02 EET" name="lanuchApplication" finished-at="2025-01-18T22:44:08 EET" duration-ms="6057" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchApplication -->
-        <test-method signature="verifySearchSystemsUsersviaName()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:44:08 EET" name="verifySearchSystemsUsersviaName" finished-at="2025-01-18T22:44:24 EET" duration-ms="16536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchSystemsUsersviaName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestAdminSearchPage@525575]" started-at="2025-01-18T22:44:24 EET" name="tearDown" finished-at="2025-01-18T22:44:24 EET" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- TestFeatures.TestAdminSearchPage -->
-      <class name="TestFeatures.TestLoginLandingPage">
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestFeatures.TestLoginLandingPage@46dffdc3]" started-at="2025-01-18T22:44:24 EET" name="lanuchApplication" finished-at="2025-01-18T22:44:42 EET" duration-ms="17741" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lanuchApplication -->
-        <test-method signature="verifyLoginFuncationlaity()[pri:0, instance:TestFeatures.TestLoginLandingPage@46dffdc3]" started-at="2025-01-18T22:44:42 EET" name="verifyLoginFuncationlaity" finished-at="2025-01-18T22:44:42 EET" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFuncationlaity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFeatures.TestLoginLandingPage@46dffdc3]" started-at="2025-01-18T22:44:42 EET" name="tearDown" finished-at="2025-01-18T22:44:42 EET" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- TestFeatures.TestLoginLandingPage -->
-    </test> <!-- E-Commerce -->
-  </suite> <!-- Suite -->
+      </class> <!-- TestFeatures.TestEditSystemUsers -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
