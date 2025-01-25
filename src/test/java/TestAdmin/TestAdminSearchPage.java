@@ -1,9 +1,9 @@
-package TestFeatures;
+package TestAdmin;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import WebsitePages.AdminSearchPage;
+import Admin.AdminSearchPage;
 import testingComponents.BaseTest;
 
 

@@ -1,8 +1,8 @@
-package TestFeatures;
+package TestAdmin;
 
 import org.testng.annotations.Test;
 
-import WebsitePages.EditSystemsUsers;
+import Admin.EditSystemsUsers;
 import testingComponents.BaseTest;
 
 public class TestEditSystemUsers extends BaseTest {
@@ -12,6 +12,5 @@ public class TestEditSystemUsers extends BaseTest {
 		EditSystemsUsers EditObj = new EditSystemsUsers(driver);
         EditObj.editSpecificUser("manda user","j" , "newAdmin","12345678a");
 	}
-	
 	
 }

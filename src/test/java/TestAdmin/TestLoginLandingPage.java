@@ -1,4 +1,4 @@
-package TestFeatures;
+package TestAdmin;
 
 import org.testng.annotations.Test;
 

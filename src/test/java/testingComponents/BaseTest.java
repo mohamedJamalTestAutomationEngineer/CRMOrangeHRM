@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import WebsitePages.LoginLandingPage;
+import Admin.LoginLandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {

@@ -27,6 +27,12 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 
 	}
+	
+	public void waitForElementTobeInDOM(By findeBy) {
+		// Wait for the file input element to be present in the DOM
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.presenceOfElementLocated(findeBy));
+	}
 
 	// Helper method to wait for an element to appear
     public void waitForElementToAppear(WebElement element) {

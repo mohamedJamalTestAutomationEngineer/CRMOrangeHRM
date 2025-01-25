@@ -1,4 +1,4 @@
-package WebsitePages;
+package Admin;
 
 import java.time.Duration;
 import java.util.List;

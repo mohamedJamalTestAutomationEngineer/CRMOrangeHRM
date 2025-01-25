@@ -1,8 +1,8 @@
-package TestFeatures;
+package TestAdmin;
 
 import org.testng.annotations.Test;
 
-import WebsitePages.AddSystemsUsers;
+import Admin.AddSystemsUsers;
 import testingComponents.BaseTest;
 
 public class TestAddSystemUsers extends BaseTest {
