@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestAdmin.TestJobTitle">
+      <class name="TestAdmin.TestWorkShift">
         <methods>
-          <include name="tearDown"/>
+          <include name="testWorkShiftCreationInvalidShift"/>
           <include name="lanuchApplication"/>
-          <include name="testJobDeletion"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestAdmin.TestJobTitle -->
+      </class> <!-- TestAdmin.TestWorkShift -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-25T20:51:36 EET" name="Default suite" finished-at="2025-01-25T20:51:55 EET" duration-ms="19261">
+  <suite started-at="2025-01-26T11:54:11 EET" name="Default suite" finished-at="2025-01-26T11:54:26 EET" duration-ms="15034">
     <groups>
     </groups>
-    <test started-at="2025-01-25T20:51:36 EET" name="Default test" finished-at="2025-01-25T20:51:55 EET" duration-ms="19261">
-      <class name="TestAdmin.TestJobTitle">
-        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestAdmin.TestJobTitle@3a7442c7]" started-at="2025-01-25T20:51:36 EET" name="lanuchApplication" finished-at="2025-01-25T20:51:50 EET" duration-ms="13627" status="PASS">
+    <test started-at="2025-01-26T11:54:11 EET" name="Default test" finished-at="2025-01-26T11:54:26 EET" duration-ms="15034">
+      <class name="TestAdmin.TestWorkShift">
+        <test-method is-config="true" signature="lanuchApplication()[pri:0, instance:TestAdmin.TestWorkShift@5149d738]" started-at="2025-01-26T11:54:11 EET" name="lanuchApplication" finished-at="2025-01-26T11:54:18 EET" duration-ms="6701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchApplication -->
-        <test-method signature="testJobDeletion()[pri:0, instance:TestAdmin.TestJobTitle@3a7442c7]" started-at="2025-01-25T20:51:50 EET" name="testJobDeletion" finished-at="2025-01-25T20:51:55 EET" duration-ms="5573" status="PASS">
+        <test-method signature="testWorkShiftCreationInvalidShift()[pri:3, instance:TestAdmin.TestWorkShift@5149d738]" started-at="2025-01-26T11:54:18 EET" name="testWorkShiftCreationInvalidShift" finished-at="2025-01-26T11:54:26 EET" duration-ms="8289" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testJobDeletion -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestAdmin.TestJobTitle@3a7442c7]" started-at="2025-01-25T20:51:55 EET" name="tearDown" finished-at="2025-01-25T20:51:55 EET" duration-ms="0" status="PASS">
+        </test-method> <!-- testWorkShiftCreationInvalidShift -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestAdmin.TestWorkShift@5149d738]" started-at="2025-01-26T11:54:26 EET" name="tearDown" finished-at="2025-01-26T11:54:26 EET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestAdmin.TestJobTitle -->
+      </class> <!-- TestAdmin.TestWorkShift -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
