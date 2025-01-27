@@ -3,7 +3,6 @@ package testingComponents;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -14,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -42,7 +40,14 @@ public class BaseTest {
 		if (browserName.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
 
-			ChromeOptions options = new ChromeOptions();
+			// Set ChromeOptions to disable autofill
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--disable-save-password-bubble");
+	        options.addArguments("--disable-notifications");
+	        options.addArguments("--disable-extensions");
+	        options.addArguments("--disable-autofill-keyboard-accessory-view[8]");
+	        options.addArguments("--disable-popup-blocking");
+	        
 			if (browserName.contains("headless")) {
 				options.addArguments("headless");
 			}
