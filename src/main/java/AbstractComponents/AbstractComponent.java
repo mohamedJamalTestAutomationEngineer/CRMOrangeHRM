@@ -29,6 +29,11 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 
+	public void waitForDialog() {
+		// Wait for the file upload dialog to appear
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.alertIsPresent()); 
+	}
 	
 	
 	public void waitForElementTobeInDOM(By findeBy) {

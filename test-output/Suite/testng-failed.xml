@@ -6,13 +6,28 @@
   </listeners>
   <test thread-count="5" name="E-Commerce(failed)">
     <classes>
-      <class name="TestFeatures.TestAddSystemUsers">
+      <class name="TestAdmin.TestAddSystemUsers">
         <methods>
           <include name="lanuchApplication"/>
           <include name="tearDown"/>
           <include name="testAddUsersPositiveScenario"/>
         </methods>
-      </class> <!-- TestFeatures.TestAddSystemUsers -->
+      </class> <!-- TestAdmin.TestAddSystemUsers -->
+      <class name="TestAdmin.TestDeleteSystemUsers">
+        <methods>
+          <include name="lanuchApplication"/>
+          <include name="tearDown"/>
+          <include name="testDeleteUsersNegativeScenario"/>
+        </methods>
+      </class> <!-- TestAdmin.TestDeleteSystemUsers -->
+      <class name="TestAdmin.TestJobTitle">
+        <methods>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+          <include name="testJobExistance"/>
+          <include name="testJobTitleCreationNegative"/>
+        </methods>
+      </class> <!-- TestAdmin.TestJobTitle -->
     </classes>
   </test> <!-- E-Commerce(failed) -->
 </suite> <!-- Failed suite [Suite] -->

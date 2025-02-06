@@ -6,9 +6,15 @@
 	</listeners>
 	<test thread-count="5" name="E-Commerce">
 		<classes>
-			<class name="TestFeatures.TestAddSystemUsers" />
-			<class name="TestFeatures.TestAdminSearchPage" />
-			<class name="TestFeatures.TestLoginLandingPage" />
+			<class name="TestAdmin.TestAddSystemUsers" />
+			<class name="TestAdmin.TestAdminSearchPage" />
+			<class name="TestAdmin.TestLoginLandingPage" />
+			<class name="TestAdmin.TestCorporateBranding" />
+			<class name="TestAdmin.TestDeleteSystemUsers" />
+			<class name="TestAdmin.TestEditSystemUsers" />
+			<class name="TestAdmin.TestJobTitle" />
+			<class name="TestAdmin.TestOrganization" />
+			<class name="TestAdmin.TestWorkShift" />
 		</classes>
 	</test> <!-- Test -->
 
