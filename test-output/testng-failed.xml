@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="testingComponents.ListenersNG"/>
-  </listeners>
-  <test thread-count="5" name="E-Commerce(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestAdmin.TestAddSystemUsers">
+      <class name="TestAdmin.TestConfiguration">
         <methods>
           <include name="lanuchApplication"/>
           <include name="tearDown"/>
-          <include name="testAddUsersPositiveScenario"/>
+          <include name="testEditEmailConfiguration"/>
         </methods>
-      </class> <!-- TestAdmin.TestAddSystemUsers -->
-      <class name="TestAdmin.TestDeleteSystemUsers">
-        <methods>
-          <include name="lanuchApplication"/>
-          <include name="tearDown"/>
-          <include name="testDeleteUsersNegativeScenario"/>
-        </methods>
-      </class> <!-- TestAdmin.TestDeleteSystemUsers -->
-      <class name="TestAdmin.TestJobTitle">
-        <methods>
-          <include name="tearDown"/>
-          <include name="lanuchApplication"/>
-          <include name="testJobExistance"/>
-          <include name="testJobTitleCreationNegative"/>
-        </methods>
-      </class> <!-- TestAdmin.TestJobTitle -->
+      </class> <!-- TestAdmin.TestConfiguration -->
     </classes>
-  </test> <!-- E-Commerce(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

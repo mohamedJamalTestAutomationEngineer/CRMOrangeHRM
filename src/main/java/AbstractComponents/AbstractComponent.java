@@ -22,8 +22,6 @@ public class AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
-	
-
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
@@ -35,16 +33,27 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.alertIsPresent()); 
 	}
 	
+	// Wait for the element to be visible
+			public void waitForSecureSMTP(WebElement element) {
+			    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			    wait.until(ExpectedConditions.visibilityOf(element));
+			}
 	
 	public void waitForElementTobeInDOM(By findeBy) {
 		// Wait for the file input element to be present in the DOM
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    wait.until(ExpectedConditions.presenceOfElementLocated(findeBy));
 	}
+	
+	public void waitForElementTobeInDOM(WebElement element, String text) {
+		// Wait for the file input element to be present in the DOM
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
+	}
 
 	// Helper method to wait for an element to appear
     public void waitForElementToAppear(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 	

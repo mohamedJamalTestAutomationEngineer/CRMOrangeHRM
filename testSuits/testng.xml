@@ -15,6 +15,7 @@
 			<class name="TestAdmin.TestJobTitle" />
 			<class name="TestAdmin.TestOrganization" />
 			<class name="TestAdmin.TestWorkShift" />
+			<class name="TestAdmin.TestConfiguration" />
 		</classes>
 	</test> <!-- Test -->
 
