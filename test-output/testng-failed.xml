@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testingComponents.ListenersNG"/>
+  </listeners>
+  <test thread-count="5" name="E-Commerce(failed)">
     <classes>
+      <class name="TestAdmin.TestAddSystemUsers">
+        <methods>
+          <include name="lanuchApplication"/>
+          <include name="tearDown"/>
+          <include name="testAddUsersPositiveScenario"/>
+        </methods>
+      </class> <!-- TestAdmin.TestAddSystemUsers -->
       <class name="TestAdmin.TestEmailSubscriptions">
         <methods>
           <include name="testEditEmailConfiguration"/>
@@ -11,6 +21,27 @@
           <include name="testAddNewEmailSubscription"/>
         </methods>
       </class> <!-- TestAdmin.TestEmailSubscriptions -->
+      <class name="TestAdmin.TestDeleteSystemUsers">
+        <methods>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+          <include name="testDeleteUsersNegativeScenario"/>
+        </methods>
+      </class> <!-- TestAdmin.TestDeleteSystemUsers -->
+      <class name="TestAdmin.TestJobTitle">
+        <methods>
+          <include name="lanuchApplication"/>
+          <include name="testJobExistance"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestAdmin.TestJobTitle -->
+      <class name="TestAdmin.TestEmailConfiguration">
+        <methods>
+          <include name="testEditEmailConfiguration"/>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+        </methods>
+      </class> <!-- TestAdmin.TestEmailConfiguration -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- E-Commerce(failed) -->
+</suite> <!-- Failed suite [Suite] -->

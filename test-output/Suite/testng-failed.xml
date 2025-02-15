@@ -13,21 +13,35 @@
           <include name="testAddUsersPositiveScenario"/>
         </methods>
       </class> <!-- TestAdmin.TestAddSystemUsers -->
+      <class name="TestAdmin.TestEmailSubscriptions">
+        <methods>
+          <include name="testEditEmailConfiguration"/>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+          <include name="testAddNewEmailSubscription"/>
+        </methods>
+      </class> <!-- TestAdmin.TestEmailSubscriptions -->
       <class name="TestAdmin.TestDeleteSystemUsers">
         <methods>
-          <include name="lanuchApplication"/>
           <include name="tearDown"/>
+          <include name="lanuchApplication"/>
           <include name="testDeleteUsersNegativeScenario"/>
         </methods>
       </class> <!-- TestAdmin.TestDeleteSystemUsers -->
       <class name="TestAdmin.TestJobTitle">
         <methods>
-          <include name="tearDown"/>
           <include name="lanuchApplication"/>
           <include name="testJobExistance"/>
-          <include name="testJobTitleCreationNegative"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestAdmin.TestJobTitle -->
+      <class name="TestAdmin.TestEmailConfiguration">
+        <methods>
+          <include name="testEditEmailConfiguration"/>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+        </methods>
+      </class> <!-- TestAdmin.TestEmailConfiguration -->
     </classes>
   </test> <!-- E-Commerce(failed) -->
 </suite> <!-- Failed suite [Suite] -->

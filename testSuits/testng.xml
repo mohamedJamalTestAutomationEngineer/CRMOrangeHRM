@@ -15,7 +15,9 @@
 			<class name="TestAdmin.TestJobTitle" />
 			<class name="TestAdmin.TestOrganization" />
 			<class name="TestAdmin.TestWorkShift" />
-			<class name="TestAdmin.TestConfiguration" />
+			<class name="TestAdmin.TestEmailConfiguration" />
+			<class name="TestAdmin.TestEmailSubscriptions" />
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

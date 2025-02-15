@@ -1,6 +1,5 @@
 package Admin;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,8 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import AbstractComponents.AbstractComponent;
 
@@ -55,7 +52,7 @@ public class EmailSubscription extends AbstractComponent {
 	@FindBy(xpath = "//div[@class='oxd-table-cell oxd-padding-cell'][1]")
 	private List<WebElement> notificationTypes;
 	
-	@FindBy(className = "orangehrm-main-title")
+	@FindBy(css = "h6[class='oxd-text oxd-text--h6 orangehrm-main-title']")
 	private WebElement subscriberTitle;
 	
 	@FindBy(className = "oxd-button-icon")
@@ -73,7 +70,7 @@ public class EmailSubscription extends AbstractComponent {
 	@FindBy(css = "div.oxd-toast-content")
 	private WebElement sucessMessage;
 	
-	@FindBy(xpath = "//div[@class='oxd-table-cell oxd-padding-cell'][2]")
+	@FindBy(xpath = "//div[@class='oxd-table-cell oxd-padding-cell'][2]//div[1]")
 	private List<WebElement> subscriberNames;
 
 
@@ -94,6 +91,7 @@ public class EmailSubscription extends AbstractComponent {
 		emailSubscriptions.click();
 	}
 	
+	/*
 	public String NavigateToNewEmailSubscription(String Type) throws InterruptedException {
 
 		waitForAllElementTobeInDOM(By.xpath("//div[@class='oxd-table-cell oxd-padding-cell'][1]"));
@@ -102,7 +100,7 @@ public class EmailSubscription extends AbstractComponent {
 	    System.out.println("Number of notifications: " + notificationTypes.size());
 	    
 		    for (WebElement notification : notificationTypes) {
-		    	System.out.println("Notification : " + notification.getText());
+		    	System.out.println("Notification Text: " + notification.getText());
 		        if (notification.getText().equalsIgnoreCase(Type)) {
 		            WebElement action = notification.findElement(By.xpath("./following-sibling::div[2]//button"));
 		            waitForElementToBeClickable(action);
@@ -113,10 +111,34 @@ public class EmailSubscription extends AbstractComponent {
 		    }
 		    
 		    //waitForElementToAppear(subscriberTitle);
-		    waitForElementTobeInDOM(By.className("orangehrm-main-title"));
+		    waitForElementToAppear(subscriberTitle);
+		    //waitForElementTobeInDOM(By.className("orangehrm-main-title"));
 		    return subscriberTitle.getText();
 	}
+	*/
 	
+	public String NavigateToNewEmailSubscription(String Type) throws InterruptedException {
+	    waitForAllElementTobeInDOM(By.xpath("//div[@class='oxd-table-cell oxd-padding-cell'][1]"));
+	    
+	    for (WebElement notification : notificationTypes) {
+	        System.out.println("Notification : " + notification.getText());
+	        if (notification.getText().equalsIgnoreCase(Type)) {
+	            WebElement action = notification.findElement(By.xpath("./following-sibling::div[2]//button"));
+	            waitForElementToBeClickable(action);
+	            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", action);
+	            break;
+	        }
+	    }
+	    
+	    //waitForElementTobeInDOM(By.cssSelector("h6[class='oxd-text oxd-text--h6 orangehrm-main-title']"));
+	    //waitForElementToAppear(subscriberTitle);
+	    WebElement titleSubscriber = driver.findElement(By.cssSelector("h6[class='oxd-text oxd-text--h6 orangehrm-main-title']"));
+	    waitForElementToAppear(titleSubscriber);
+	    System.out.println("subscriber Title : " + titleSubscriber.getText());
+	    return titleSubscriber.getText(); // Ensure this returns the correct title
+	}
+	
+	/*
 	public String addNewEmailSubscription(String name , String email) {
 		waitForElementToAppear(addButton);
 		addButton.click();
@@ -136,12 +158,45 @@ public class EmailSubscription extends AbstractComponent {
 		//waitForListOfElementsToAppear(subscriberNames);
 		Thread.sleep(2000);
 		for (WebElement subscriber : subscriberNames) {
+			System.out.println("Subscriber found: " + subscriber.getText());
 			String subscriberName = subscriber.getText();
 			if(subscriberName.equalsIgnoreCase(name))
 				return true;
 		}
 		return false;
 	}
+	*/
+	
+	public boolean verifyAddingSubscription(String name) throws InterruptedException {
+	    //Thread.sleep(2000); // Consider replacing with an explicit wait
+		waitForListOfElementsToAppear(subscriberNames);
+	    for (WebElement subscriber : subscriberNames) {
+	        String subscriberName = subscriber.getText();
+	        System.out.println("Subscriber Name in List: " + subscriberName); // Debug log
+	        if (subscriberName.trim().equalsIgnoreCase(name.trim())) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+	
+	public String addNewEmailSubscription(String name, String email) throws InterruptedException {
+	    waitForElementToAppear(addButton);
+	    addButton.click();
+	    
+	    waitForElementToAppear(subscriberName);
+	    subscriberName.sendKeys(name);
+	    
+	    waitForElementToAppear(subscriberEmail);
+	    subscriberEmail.sendKeys(email);
+	    
+	    saveButton.click();
+	    
+	    //Thread.sleep(2000);
+	    
+	    return getSuccessMessage();
+	}
+	
 	
 	public String getSuccessMessage() {
 	    try {
