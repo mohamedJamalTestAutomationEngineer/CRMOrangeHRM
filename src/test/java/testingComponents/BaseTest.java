@@ -13,7 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import Admin.LoginLandingPage;
@@ -88,7 +90,7 @@ public class BaseTest {
 	}
 	
 	
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass(alwaysRun = true)
 	public LoginLandingPage lanuchApplication() throws IOException, InterruptedException {
 		driver = initalizeDriver();
 		LoginLandingPage LandingObject = new LoginLandingPage(driver);
@@ -98,7 +100,7 @@ public class BaseTest {
 		return LandingObject;
 	}
 
-	@AfterMethod(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		//driver.close();
 	}

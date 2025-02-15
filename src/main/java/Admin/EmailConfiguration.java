@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import AbstractComponents.AbstractComponent;
 
-public class Configuration extends AbstractComponent {
+public class EmailConfiguration extends AbstractComponent {
 
 	private WebDriver driver; // before creating constructor , the below driver has no life , just null value
 	// so we must create constructor and this constructor will take the life from
@@ -24,7 +24,7 @@ public class Configuration extends AbstractComponent {
 	// as we are here in the pages classes
 	private Actions actions;
 
-	public Configuration(WebDriver driver) {
+	public EmailConfiguration(WebDriver driver) {
 		// The super(driver) call is used to invoke the constructor of the parent
 		// AbstractComponent class (this might handle
 		// some base functionality for all page objects).

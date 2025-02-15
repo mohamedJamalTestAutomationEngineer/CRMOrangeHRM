@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestAdmin.TestConfiguration">
+      <class name="TestAdmin.TestEmailSubscriptions">
         <methods>
-          <include name="lanuchApplication"/>
-          <include name="tearDown"/>
           <include name="testEditEmailConfiguration"/>
+          <include name="tearDown"/>
+          <include name="lanuchApplication"/>
+          <include name="testAddNewEmailSubscription"/>
         </methods>
-      </class> <!-- TestAdmin.TestConfiguration -->
+      </class> <!-- TestAdmin.TestEmailSubscriptions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
